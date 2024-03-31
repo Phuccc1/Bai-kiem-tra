@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Baikiemtra</title>
+</head>
+<body>
+    <div class="login-form">
+        <form action="#" method="post">
+          <label for="username">Login</label>
+          <input type="text" name="username" id="username" required>
+          <label for="password">Password</label>
+            <div class="password-container">
+                <input type="password" name="password" id="password" required>
+            </div>
+            <div class="remember-me">
+                <input type="checkbox" name="remember" id="remember" checked>
+                <label for="remember">Remember me</label>
+            </div>
+                <button type="submit">LOGIN</button>
+            <div class="forgot-password">
+                <a href="#">Forgot Password?</a>
+            </div>
+
+        </form>
+    </div>
+    <h1>ĐÁNH GIÁ</h1>
+
+    <div class="feedback">
+        <p class="Name">Quốc Vinh</p>
+        <p class="text">Rất hài lòng! Giao hàng nhanh,chất lượng</p>
+        <p class="Date">17/03/2024</p>
+        <p class="Name">Viết Nhạc</p>
+        <p class="text">Đã sử dụng qua sản phẩm, giá cả phải chăng sẽ có dịp ghé lại</p>
+        <p class="Date">22/03/2024</p>
+        <p class="Name"> Chí Phúc</p>
+        <p class="text">Giá cả lại hợp lý. Mua được với giá ưu đãi thích lắm.</p>
+        <p class="Date">31/03/2024</p>
+    </div>
+    <body>
+        <div id="clock">
+            <div id="time"></div>
+            <div id="progress"></div>
+        </div>
+        <script>
+            const time = document.getElementById("time");
+            const progress = document.getElementById("progress");
+    
+            function updateTime() {
+                const date = new Date();
+                const hours = date.getHours();
+                const minutes = date.getMinutes();
+                const seconds = date.getSeconds();
+        
+                time.textContent = `${hours}:${minutes}:${seconds}`;
+        
+                const progressWidth = (seconds / 60) * 100;
+                progress.style.width = `${progressWidth}%`;
+            }
+    
+             setInterval(updateTime, 1000);
+        
+             updateTime();
+        </script>
+    </body>
+
+</body>
+</html>
